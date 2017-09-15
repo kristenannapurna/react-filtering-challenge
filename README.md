@@ -1,3 +1,31 @@
+Movie Filtering App!
+
+## Basic Setup 
+
+1. You will need to get your own api key from https://www.themoviedb.org/
+2. In order to get a local development environment running, run `npm install` and then `yarn start`
+
+## Fix The Bugs!
+
+This application is designed to get a number of random movies from The Movie DB and filter them based on either date of release or genre. The buttons under the Movie Filters heading should toggle the filtering options. 
+
+1. `Genres` is not rendering. Take a look at the errors and get the `<FilterButtons/>` working.
+2. Make sure that there are no empty buttons rendered
+3. Complete the `filterMovies()` method to filter the movies using a `switch` statement. 
+4. Ensure that if a movie does not have an image, it is not rendered. 
+
+## Add Features! 
+
+1. There is no way to go back to seeing ALL movies. Add this ability.
+2. Add one more feature that adds to the useability of the application (maybe something happens when you click on a specific movie?)
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
