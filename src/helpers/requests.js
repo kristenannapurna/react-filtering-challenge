@@ -2,7 +2,7 @@ import axios from 'axios';
 
 
 // enter your api key here 
-const key = `46d336733a4e6a29747db20a40885435`;
+const key = 'YOUR KEY GOES HERE';
 
 
 // base request to get movies

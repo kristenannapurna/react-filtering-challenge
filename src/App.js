@@ -38,11 +38,6 @@ class App extends Component {
       });
     
   }
-  justGenreName(array){
-   return array.map((obj) => {
-      return obj.name
-    })
-  }
   getFilters(){
     const movies = this.state.movies;
     
@@ -92,53 +87,16 @@ class App extends Component {
     switch(filterItem) {
 
       case 'DATES': 
-        let filterByDates =  this.state.movies.filter((movie) => {
-          return (movie.release_date.substring(0,4) === filterBy)
-        })
-
-
-       return filterByDates.map((movie, index) => {
-        return  <Movie key={index + key} info={movie} />
-       });
+        return;
 
       case 'GENRES':
-
-        // find matching genre object
-        let genreId = this.state.genres.filter((genre) => {
-          return genre.name === filterBy;
-        })
-
-        // grab genre id from object
-        genreId = genreId[0].id;
-
-        // filter movies for match 
-        let filterByGenre = movies.filter((movie) => {
-            // genre ids are in a nested array
-              let match = movie.genre_ids.filter((genre) => {
-                return genre === genreId
-              });
-
-              // if the array contains a match, return the movie 
-              return match.length  > 0;
-
-            });
-        return (
-            // eslint-disable-next-line
-            filterByGenre.map((movie, index) => {
-              if(movie.backdrop_path){
-                return <Movie key={index + key} info={movie} />
-              }
-            })
-
-          );
+        return;
 
       default:
         return (
         // eslint-disable-next-line
             movies.map((movie, index) => {
-              if(movie.backdrop_path){
                 return <Movie key={index + key} info={movie} />
-              }
             })
           );
        
@@ -159,7 +117,7 @@ class App extends Component {
             this.state.filterView === 'Dates' ? 
               <FilterButtons filter={this.filterStates} comparison={'DATES'} filterData={this.state.dates} /> 
                : 
-             <FilterButtons filter={this.filterStates} comparison={'GENRES'} filterData={this.justGenreName(this.state.genres)} />
+             <FilterButtons filter={this.filterStates} comparison={'GENRES'} filterData={this.state.genres} />
           }
           
           
