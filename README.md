@@ -3,7 +3,7 @@ Movie Filtering App!
 ## Basic Setup 
 
 1. You will need to get your own api key from https://www.themoviedb.org/
-2. In order to get a local development environment running, run `npm install` and then `yarn start`
+2. In order to get a local development environment running, run `npm install` and then `npm start`
 
 ## Fix The Bugs!
 
